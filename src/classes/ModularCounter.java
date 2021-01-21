@@ -1,4 +1,4 @@
-package model;
+package classes;
 
 /** 
  * Objects constructed from the ModularCounter class represent integral

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane alignment="center" hgap="1.0" vgap="1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controllerview.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+   </rowConstraints>
+   <children>
+      <Button fx:id="btn_redInc" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="+10" GridPane.columnIndex="1" />
+      <Button fx:id="btn_redDec" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="-10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="btn_greenInc" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="+10" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn_greenDec" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="-10" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="btn_blueInc" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="+10" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button fx:id="btn_blueDec" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="-10" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField fx:id="txtf_rgbValueRed" prefHeight="60.0" prefWidth="150.0" GridPane.rowIndex="1" />
+      <TextField fx:id="txtf_rgbValueGreen" prefHeight="60.0" prefWidth="150.0" GridPane.rowIndex="3" />
+      <TextField fx:id="txtf_rgbValueBlue" prefHeight="60.0" prefWidth="150.0" GridPane.rowIndex="5" />
+      <Label prefHeight="60.0" prefWidth="150.0" text="Red" />
+      <Label prefHeight="60.0" prefWidth="150.0" text="Green" GridPane.rowIndex="2" />
+      <Label prefHeight="60.0" prefWidth="150.0" text="Blue" GridPane.rowIndex="4" />
+      <Button fx:id="btn_colorView" mnemonicParsing="false" prefHeight="182.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowSpan="3" />
+      <TextField fx:id="txtf_hexValue" prefHeight="182.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.rowSpan="3" />
+   </children>
+</GridPane>

@@ -6,8 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**************************
+ * @author Nevena Kolev
+ * @version 1.0, 21-01-21
+ **************************/
 public class Main extends Application {
-
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -18,6 +21,7 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+        //launches the JavaFX Application
         launch(args);
     }
 }

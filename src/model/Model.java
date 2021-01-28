@@ -6,6 +6,8 @@ import classes.ModularCounter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// TODO: 28.01.2021 loadFromFile() & saveToFile()
+
 public class Model {
     //=============================================== Variables ======================================================//
     private static ModularCounter red = new ModularCounter(256);

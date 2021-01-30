@@ -47,7 +47,7 @@
          </padding></Label>
       <Button fx:id="btn_colorView" maxWidth="150.0" mnemonicParsing="false" prefHeight="182.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="3" />
       <TextField fx:id="txtf_hexValue" maxWidth="150.0" prefHeight="60.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" onMouseClicked="#loadFromFile" prefHeight="60.0" prefWidth="75.0" text="Load" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      <Button mnemonicParsing="false" onMouseClicked="#saveToFile" prefHeight="60.0" prefWidth="75.0" text="Save" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onMouseClicked="#load" prefHeight="60.0" prefWidth="75.0" text="Load" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onMouseClicked="#save" prefHeight="60.0" prefWidth="75.0" text="Save" GridPane.columnIndex="3" GridPane.rowIndex="5" />
    </children>
 </GridPane>

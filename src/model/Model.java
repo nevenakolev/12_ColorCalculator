@@ -3,10 +3,8 @@ package model;
 import classes.ColorCode;
 import classes.ModularCounter;
 
-import java.util.InputMismatchException;
+import java.io.*;
 import java.util.Scanner;
-
-// TODO: 28.01.2021 loadFromFile() & saveToFile()
 
 public class Model {
     //=============================================== Variables ======================================================//
@@ -14,6 +12,8 @@ public class Model {
     private static ModularCounter green = new ModularCounter(256);
     private static ModularCounter blue = new ModularCounter(256);
     private static Scanner sc = new Scanner(System.in); //Scanner
+    final String KEY = "Color File Format 1.0";
+    final String FILENAME = "color.dat";
 
     //============================================= color changing ===================================================//
     public static void changeColorViaAbsoluteValue(ColorCode cc, int value) {
@@ -102,14 +102,46 @@ public class Model {
         return hexValue;
     }
 
+    //======================================= load and save into files ===============================================//
+    public void loadFromFile() {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILENAME))) {
+            if (reader.readLine().equals(KEY)) {
+                changeColorViaAbsoluteValue(ColorCode.RED, Integer.parseInt(reader.readLine()));
+                changeColorViaAbsoluteValue(ColorCode.GREEN, Integer.parseInt(reader.readLine()));
+                changeColorViaAbsoluteValue(ColorCode.BLUE, Integer.parseInt(reader.readLine()));
+            } else {
+                System.out.println("Error: wrong file!");
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public void saveToFile() {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILENAME))) {
+            //clears content
+            writer.flush();
+            writer.write("Color File Format 1.0");
+            writer.newLine();   //linebreak
+            writer.write("" + getRed());
+            writer.newLine();
+            writer.write("" + getGreen());
+            writer.newLine();
+            writer.write("" + getBlue());
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+
     //============================================== other methods ===================================================//
-    Model() {
+    public Model() {
 
     }
 
     public static void main(String[] args) {
         String selection;
-        boolean correctInput; // TODO: 22.01.2021  new
+        boolean correctInput;
 
         do {
             //prints out the menu
